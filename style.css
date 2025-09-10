@@ -49,6 +49,7 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-link {
@@ -269,8 +270,8 @@ section {
 /* Symptoms section */
 .symptoms-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .symptoms-column h3 {
@@ -306,6 +307,78 @@ section {
     left: 0.8rem;
     color: #667eea;
     font-weight: bold;
+}
+
+/* Impairments section */
+.impairments {
+    background: white;
+    padding: 4rem 0;
+}
+
+.impairments-container {
+    display: grid;
+    gap: 4rem;
+}
+
+.impairment-section h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #667eea;
+    text-align: center;
+}
+
+.impairment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.impairment-item {
+    background: #f8f9ff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impairment-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.impairment-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.impairment-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.impairment-item li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.impairment-item li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-size: 0.8rem;
+}
+
+.impairment-item li:hover {
+    color: #333;
 }
 
 /* Test info section */
@@ -375,6 +448,18 @@ section {
     color: #333;
 }
 
+.resource-card a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resource-card a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
 /* Footer */
 .footer {
     background: #333;
@@ -409,6 +494,8 @@ section {
     
     .nav-links {
         gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .hero {
@@ -433,6 +520,10 @@ section {
     }
     
     .symptoms-container {
+        grid-template-columns: 1fr;
+    }
+
+    .impairment-grid {
         grid-template-columns: 1fr;
     }
 }
