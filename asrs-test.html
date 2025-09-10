@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASRS ADHD Self-Assessment Test - Can I Have ADHD?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">🧠 Can I Have ADHD?</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#test" class="nav-link active">ASRS Test</a>
+            </div>
+        </div>
+    </nav>
+
+    <main style="margin-top: 80px; min-height: calc(100vh - 80px); background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem 0;">
+        <div class="container">
+            <div class="test-container">
+                <div class="test-header">
+                    <h1>ASRS-v1.1 Self-Assessment</h1>
+                    <p>Adult ADHD Self-Report Scale Screener</p>
+                    <div class="test-progress">
+                        <div class="test-progress-bar" id="progressBar"></div>
+                    </div>
+                    <p id="progressText">Question 1 of 18</p>
+                </div>
+
+                <div class="test-content">
+                    <form id="asrsForm">
+                        <!-- Questions will be populated by JavaScript -->
+                        <div class="question-container active" id="question-0">
+                            <p class="question-text" id="questionText">Loading question...</p>
+                            <div class="answer-options" id="answerOptions">
+                                <!-- Options will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="test-navigation">
+                            <button type="button" class="nav-btn" id="prevBtn" onclick="previousQuestion()" disabled>Previous</button>
+                            <button type="button" class="nav-btn primary" id="nextBtn" onclick="nextQuestion()">Next</button>
+                        </div>
+                    </form>
+
+                    <!-- Results section (initially hidden) -->
+                    <div id="resultsContainer" class="results-container" style="display: none;">
+                        <h2>Your ASRS Assessment Results</h2>
+                        <div class="score-display" id="scoreDisplay">0/18</div>
+                        <div class="score-interpretation" id="scoreInterpretation">
+                            <h3>Score Interpretation</h3>
+                            <p id="interpretationText"></p>
+                        </div>
+                        <div class="disclaimer">
+                            <strong>Important Disclaimer:</strong> This assessment is a screening tool and not a diagnostic test. 
+                            A positive result does not mean you have ADHD, and a negative result does not rule it out. 
+                            Please consult with a qualified healthcare professional for proper evaluation and diagnosis.
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <button onclick="restartTest()" class="btn btn-secondary" style="margin-right: 1rem;">Take Test Again</button>
+                            <a href="index.html" class="btn btn-primary">Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Can I Have ADHD. This assessment is based on the ASRS-v1.1 developed by the World Health Organization and is for informational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
